@@ -1,0 +1,43 @@
+#include<iostream.h>
+#include<conio.h>
+
+class AB
+{
+	int m,n;
+
+	public:
+
+	AB()
+	{
+		m=10;
+		n=20;
+	}
+	AB(int a,int b)
+	{
+		m=a;
+		n=b;
+	}
+	AB(AB &i)
+	{
+		m=i.m;
+		n=i.n;
+
+	}
+	void dis()
+	{
+		cout<<"\n \n M= "<<m<<endl<<"N= "<<n;
+	}
+};
+void main()
+{
+
+	AB a1;
+	clrscr();
+	AB a2(40,30);
+	AB a3(a2);
+	a1.dis();
+	a2.dis();
+	a3.dis();
+	getch();
+
+}
